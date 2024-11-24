@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="AddressedHeader" *ngIf = "AddressedUser |async as user" >
+   
+            {{user.name}}
+        
+    </div>
+    <div class="MessegesContainer">
+        <!-- <app-message class="Message" *ngFor="let message of CurrentMessege |async"> -->
+         <app-message *ngFor="let message of CurrentMessege |async" [Message] = "message" ></app-message>   
+    </div> 
+    <div class="inputbar">
+        <input type="text" name="messegeInput" [(ngModel)] ="messegeInput">
+        <button (click)="sendMessege()" >Send</button>
+    </div>    
+</div>
+

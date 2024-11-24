@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="disconnect">
+        <button (click)="OnClick()">
+            Disconnect
+        </button>
+        
+    </div>
+    <div class="CurrentUsersContainer" >
+        <div class="User" *ngFor="let user of CurrentUsers |async" (click)="ChooseAdressedUser(user)">
+            {{ user.name }}
+        </div>
+    </div>
+</div>

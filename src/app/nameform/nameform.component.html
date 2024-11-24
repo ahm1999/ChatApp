@@ -1,0 +1,10 @@
+<div class="container" >
+    <form (ngSubmit)="OnSubmit()" class="formContainer">
+        <p>name : {{UserName}}</p>
+        <p>please enter your Name</p>
+        <label for="UserName">Name</label>
+        <input name="UserName" type="text" [(ngModel)] ="UserName">
+        <button type="submit">Select Name</button>
+    </form>    
+</div>
+
